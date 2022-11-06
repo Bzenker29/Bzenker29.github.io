@@ -14,11 +14,25 @@ body {
 .assignment img {
     width:300px;
     height:300px;
-    padding:15px;
+    margin:15px;
+    border:4px solid darkcyan;
 
+}
+
+.assignment img:hover {
+    border:4px solid crimson;
 }
 
 h2 {
     color:mediumpurple;
     text-align:center;
+}
+
+a {
+    color:darkcyan;
+    text-decoration:none;
+}
+
+a:hover{
+    color:crimson;
 }
