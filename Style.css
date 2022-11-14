@@ -4,10 +4,16 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+.assignments {
+    display:flex;
+    flex-wrap:wrap;
+}
+
 .assignment {
-   display:flex;
-   padding:10px;
-   margin:15px;
+    width:22%;
+    padding:10px;
+    margin:15px;
+    padding:20px 10px;
     background:lightpink;
 }
 
@@ -16,7 +22,8 @@ body {
     height:300px;
     margin:15px;
     border:4px solid darkcyan;
-
+    display:block;
+    margin:auto;
 }
 
 .assignment img:hover {
@@ -25,6 +32,10 @@ body {
 
 h2 {
     color:mediumpurple;
+    text-align:center;
+}
+
+h4{
     text-align:center;
 }
 
