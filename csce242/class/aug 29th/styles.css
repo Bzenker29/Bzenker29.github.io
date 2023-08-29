@@ -1,0 +1,40 @@
+/* Structure */
+
+
+body {
+    background-color: mediumturquoise;
+}
+
+/* Fonts */ 
+
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h1 {
+    color: yellow;
+    background-color: darkgreen;
+}
+
+h2 {
+    color: darkturquoise;
+    background-color: hotpink;
+}
+
+p {
+    color: darkslateblue;
+    background-color: coral;
+}
+
+table {
+    color: greenyellow;
+    background-color: crimson;
+    border-collapse: collapse;
+}
+
+/* Tables */
+
+td, th{
+    border: 2px solid blue;
+}
+
