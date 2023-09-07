@@ -1,0 +1,143 @@
+/* Bradley Zenker's work, csce242 */
+
+/* Structure */
+
+body {
+    background-color: lightskyblue;
+}
+
+#main-header h1{
+    background-color: lightskyblue;
+}
+
+#main-footer {
+    padding-top: 2px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: lightpink;
+}
+
+#main-info {
+    background-color: antiquewhite;
+    padding: 5px;
+    margin: 10px;
+}
+#sidebar {
+    background-color: lightblue;
+}
+
+#content-header {
+    padding: 8px;
+    margin: auto;
+}
+
+.padded-area {
+    padding: 6px;
+    margin: auto;
+}
+
+.columns,
+#main-text,
+#sidebar {
+    border-radius: 3px;
+    margin: 3px;
+    padding: 5px;
+}
+
+.images {
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+
+
+.info {   
+    background-color: darksalmon;
+    margin: 6px;
+    border: 2px solid darkorchid;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.c1of3 {
+    background-color: cornsilk;
+    border: 2px solid darkcyan;    
+}
+
+p {
+    padding: 10px;
+    margin: auto;
+}
+
+/* Main Navigation */ 
+
+#main-nav ul {
+    padding-left: 0px;
+    margin: 15px;
+    background-color: lightcoral;
+    text-align: center;
+}
+
+#main-nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#main-nav a:hover {
+    border-bottom: 3px solid white;
+    background-color: darkslategray;
+    color: white;
+}
+
+/* Typography */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content-header,
+#main-text {
+    text-align: left;
+}
+
+#main-header h1,
+#sec-header,
+.c1of3 h4 {
+    text-align: center;
+}
+
+#main-footer {
+    text-align: right;
+}
+
+/* Larger Resolutions */
+
+@media only screen and (min-width: 900px) {
+    #main-nav ul,
+    .flex,
+    .img {
+        display: flex;
+    }
+    
+    #main-nav li,
+    .c1of2,
+    .c1of3,
+    #sidebar,
+    #images {
+        flex: 1;
+    }
+
+    #main-info {
+        flex: 3;
+    }  
+    
+    .img {
+        justify-content: center;
+        align-items: center;
+    }
+}
