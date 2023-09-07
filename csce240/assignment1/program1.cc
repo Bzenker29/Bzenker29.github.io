@@ -17,7 +17,7 @@ int main(){
     while (true) {
         cin >> userInput;
 
-        if (userInput == "Q" || userInput == "Q") {
+        if (userInput == "q" || userInput == "Q") {
             break;
             //Ends code once q or Q is entered
         }
@@ -71,7 +71,7 @@ int main(){
     else {
         cout << "Total run time is " << "."; 
     }
-    cout << (minutes < 10 ? "0" : "") < minutes << ":" << (seconds < 10 ? "0" : "") << seconds << endl;
+    cout << (minutes < 10 ? "0" : "") << minutes << ":" << (seconds < 10 ? "0" : "") << seconds << endl;
 
     return 0;
 }
