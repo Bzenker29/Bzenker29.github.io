@@ -1,0 +1,75 @@
+/* Structure */
+
+
+.assignments {
+    background-color: darkgrey;
+    padding: 4px;
+    margin: 8px;
+    flex-wrap: wrap; 
+
+}
+
+#main-footer {
+    background-color: darkseagreen;
+    text-align: center;
+}
+
+.assignments h3 {
+    text-align: center;
+    margin: auto;
+}
+
+#main-content {
+    margin: 6px;
+    padding: 4px;
+}
+
+#main-header h1,
+#main-header h3 {
+    text-align: center;
+}
+
+.padded-area {
+    padding: 6px;
+    margin: auto;
+}
+
+p {
+    padding: 10px;
+    margin: auto;
+}
+
+.img {
+    padding: 10px;
+    display: block;
+    margin: auto;
+    height: auto;  
+}
+
+/* Typography */
+
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+
+/* Larger Resolution */
+
+@media only screen and (min-width: 900px) {
+
+.flex,
+.rows {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}
+
+.img {
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
