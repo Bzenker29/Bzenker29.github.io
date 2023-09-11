@@ -44,15 +44,17 @@ ul, li {
 #section2 h1 {
     background-color: #73000a;
     color: whitesmoke;
-    width: 100%;
+    width: 85%;
     text-align: center;
     font-size: xx-large;
+    padding: 20px;
+    margin-top: -10;
 }
 
 #section2 h2,
 #section2 p {
     background-color: darkgray;
-    padding: 20px;
+    padding: 30px;
     margin: 35px;
 }
 
