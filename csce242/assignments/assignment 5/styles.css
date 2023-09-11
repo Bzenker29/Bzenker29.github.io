@@ -10,6 +10,7 @@ body {
 #main-header {
     background-color: black;
     margin-top: -10px;
+    color: whitesmoke;
 }
 
 #main-nav {
@@ -36,26 +37,28 @@ ul, li {
 }
 
 #section2 {
-    background-color: white;
-    margin-top: -24px;
+    background-color: whitesmoke;
+    margin-top: -16px;
 }
 
 #section2 h1 {
     background-color: #73000a;
-    color:white;
-    width: 40%;
+    color: whitesmoke;
+    width: 100%;
     text-align: center;
     font-size: xx-large;
 }
 
 #section2 h2,
 #section2 p {
-    padding: 10px;
+    background-color: darkgray;
+    padding: 20px;
     margin: 35px;
 }
 
 #section3 {
-    background-color: #73000a;
+    background-color: black;
+    margin-bottom: 20px;
 }
 
 #section3 h2, 
@@ -66,7 +69,8 @@ ul, li {
 }
 
 #section4 {
-    background: black;
+    background: #73000a;
+    margin-bottom: 15px;
 }
 
 #section4 h2,
@@ -78,6 +82,7 @@ ul, li {
 
 #section5 {
     background-color: #ececec;
+    margin-bottom: 15px;
 }
 
 #section5 h1,
@@ -95,8 +100,12 @@ ul, li {
     color: black;
 }
 
-#section-six h1 {
-    color:#73000a;
+#section6 h1 {
+    background-color: #73000a;
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
 }
 
 #section6 h2{
@@ -136,12 +145,15 @@ ul, li {
 }
 
 #section8 h1 {
-    color:#73000a;
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
     margin: 20px;
 }
 
 #section8 p {
-    color: black;
+    color: white;
+    background-color: #73000a;
     margin: 20px;
 }
 
@@ -257,6 +269,14 @@ footer a:hover {
 
 /* Images */
 
+#section3 img,
+#section5 img,
+#section9 img,
+#section11 img {
+    display: block;
+    margin-right: 50%;
+}
+
 #main-header img,
 #section12 img {
     display: block;
@@ -268,23 +288,15 @@ footer a:hover {
     margin-bottom: -10px;
 }
 
-#section3 img,
-#section5 img,
-#section9 img,
-#section11 img {
+#section8 img {
     display: block;
-    margin-right: 50%;
+    margin-left: 0%;
+    padding: 35px;
 }
 
 #section4 img {
     display: block;
     margin-left: 0%;
-}
-
-#section8 img {
-    display: block;
-    margin-left: 0%;
-    padding: 35px;
 }
 
 /* Typography */
@@ -298,13 +310,13 @@ footer a:hover {
 #section5 a,
 #section10 a {
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
 }
 #main-nav a:hover {
-    background:#cc2e40;
+    background: #1E404D;
 }
 #section1 a:hover {
-    background-color: #cc2e40;
+    background-color: #1E404D;
 }
 
 /* Larger Resolutions */
@@ -322,7 +334,14 @@ footer a:hover {
     .flex-con {
         display: flex;
     }
+
     .flex {
         display: 1;
     }
+
+    #section1 ul,
+    #main-nav ul {
+        justify-content: center;
+    }
+
 }
