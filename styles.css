@@ -1,79 +1,90 @@
-/* Structure */
-
-
-.assignments {
-    background-color: darkgrey;
-    padding: 4px;
-    margin: 8px;
-    flex-wrap: wrap; 
-
-}
-
-#main-footer {
-    background-color: darkseagreen;
-    text-align: center;
-}
-
-.assignments h3 {
-    text-align: center;
-    margin: auto;
+/* Structure and Layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightskyblue;  
+    margin: 0;
+    padding: 0;
 }
 
 #main-content {
-    margin: 10px;
-    padding: 4px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: darkslategray;  
+    border-radius: 12px;
 }
 
-#main-header h1,
-#main-header h3 {
+header {
+    background-color: cadetblue;  
+    color: #e1e9f0;  
+    padding: 10px 0;
     text-align: center;
-}
-
-.padded-area {
-    padding: 6px;
-    margin: auto;
-}
-
-p {
-    padding: 10px;
-    margin: auto;
-}
-
-.img {
-    padding: 10px;
-    display: block;
-    margin: auto;
-    height: auto;  
-}
-
-/* Typography */
-
-body {
-    font-family:Arial, Helvetica, sans-serif
-}
-
-
-/* Larger Resolution */
-
-@media only screen and (min-width: 900px) {
-
-.flex,
-.rows {
-    display: flex;
+    border-radius: 10px;
 }
 
 .content {
-    flex: 1;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .assignments {
-    flex-wrap: wrap;
+    background-color: lightsalmon;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    flex: 1;  
+    min-width: 250px;  
+    max-width: 30%; 
+    text-align: center;
 }
 
 .img {
-    justify-content: center;
-    align-items: center;
+    margin-top: 10px;
+    max-width: 80%;  
+    height: auto;  
+    border-radius: 5px;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: white;  
 }
 
+footer {
+    background-color: cadetblue;  
+    color: #e0e0e0;  
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;  
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .assignments-container {
+        flex-direction: column;
+    }
+    .assignment-box {
+        flex-basis: 100%;
+    }
+    .img {
+        justify-content: center;
+        align-items: center;
+    }
+}
