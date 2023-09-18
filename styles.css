@@ -66,6 +66,10 @@ body {
     flex: 1;
 }
 
+.assignments {
+    flex-wrap: wrap;
+}
+
 .img {
     justify-content: center;
     align-items: center;

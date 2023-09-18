@@ -1,0 +1,128 @@
+
+/* Structure */ 
+
+#main-header,
+#main-footer {
+    text-align: center;
+    background-color: aqua; 
+    margin: 5px;
+    padding: 5px;
+    border: 3px solid black;
+}
+
+.invisible {
+    display: none;
+}
+
+#show, #hide {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#ball {
+    background-color: deeppink;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.size-change {
+    animation-name: size-change;
+    animation-duration: 6s;
+    animation-iteration-count: 3;
+    position: relative;
+}
+
+.comment-style {
+    background-color: coral;
+    border: 3px solid darkred;
+    padding-left: 0px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#main-content {
+    margin: 10px;
+    padding: 4px;
+}
+
+.c-details {
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+.c1o3 {
+    padding-left: 0px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: lightgreen;
+    border: 3px solid darkcyan;
+}
+
+.button {
+    padding: 6px;
+    margin: auto;
+}
+
+.padded-area {
+    padding: 6px;
+    margin: auto;
+    align-items: center;
+}
+
+.c1o3 h3 {
+    text-align: center;
+    margin: auto;
+    padding: 6px;
+}
+
+/* Ball Animation */
+
+@keyframes size-change {
+    0% {background-color: deeppink;
+        width: 25px;}
+    20% {background-color: orange;
+        height: 25px;
+        width: 100px}
+    40% {background-color: mediumturquoise;
+        height: 100px;
+        width: 25px;}
+    60% {background-color: deeppink;
+        height: 25px;
+        width: 100px;}
+    80% {background-color: orange;
+        height: 100px;
+        width: 25px;}
+    99% {background-color: mediumturquoise;
+        height: 25px;
+        width: 100px;}
+    100% {background-color: deeppink;
+        height: 100px;
+        width: 100px;}
+}
+
+/* Typography */
+
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/* Larger Resolution */
+
+@media only screen and (min-width: 900px) {
+
+    .flex,
+    .rows {
+        display: flex;
+    }
+    
+    .c1o3 {
+        flex: 1;
+    }
+    
+    
+    }
