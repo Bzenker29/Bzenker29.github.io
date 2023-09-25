@@ -14,7 +14,7 @@ const showInputs = () => {
 
     const messageP = document.getElementById("message");
 
-    if (isNaN(age1) || isNaN(age2) || isNaN(age3)) 
+    if (isNaN(ageOne) || isNaN(ageTwo) || isNaN(ageThree)) 
     {
         messageP.textContent = "Error: Please enter the ages as numbers.";
     }
@@ -23,19 +23,18 @@ const showInputs = () => {
         const names = [nameOne, nameTwo, nameThree];
         const ages = [ageOne, ageTwo, ageThree];
         
-        const ageCounter = [...ages].sort((a, b) => b - a);
-        const nameSorter = ageCounter.map((age) => {
-            const index = ages.indexOf(age);
-            return names[index];
+        // Combine names and ages and sort by age in descending order
+        const sortedData = names.map((name, index) => ({ name, age: ages[index] }))
+                                .sort((a, b) => b.age - a.age);
 
-        });
-        messageP.textContent = `Oldest to Youngest: ${orderedNames.join(', ')}`;
-        
+        // Create an array of strings containing names and ages
+        const sortedNamesAndAges = sortedData.map(entry => `${entry.name} is ${entry.age} years old`);
 
-    };
-
-    messageP.innerHTML = "Name 1 : " + nameOne + "Age 1   : " + ageOne + "Name 2 : " + nameTwo + "Age 2  : " + ageTwo + "Name 3 : " + nameThree + "Age 3  : " + ageThree;
+        // Display the sorted names and ages
+        messageP.textContent = `Oldest to Youngest: ${sortedNamesAndAges.join(', ')}`;
+    }
 };
+
 
 const addExerciseOne = () => {
     document.getElementById("exercise1").style.display = 'block';
