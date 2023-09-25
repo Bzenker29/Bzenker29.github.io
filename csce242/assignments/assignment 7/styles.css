@@ -4,7 +4,6 @@
     --secondary: darkgoldenrod;
 }
 
-
 /* Structure */
 body {
     background-color: bisque;
@@ -43,23 +42,19 @@ body {
 #meter {
     background-color: cornsilk;
     background: linear-gradient(to top, cornsilk 0%, cornsilk 100%);
-     width: 50px; 
-
-    
+    width: 50px; 
     height: 200px; 
     border-radius: 5px; 
     position: relative;
-    
 }
    
-#meterFiller {
+#counter {
     width: 100%;
     height: 0; 
-    background-color: dodgerblue; 
-    border-radius: inherit;
+    background-color: dodgerblue;
+    position: absolute;
+    bottom: 0; 
 }
-
-
 
 /* Navigation */
 #main-nav ul {
@@ -109,7 +104,4 @@ body {
     #nav-toggle {
         display: none;
     }
-
-
-
 }
