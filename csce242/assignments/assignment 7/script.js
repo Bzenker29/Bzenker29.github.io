@@ -23,18 +23,14 @@ const showInputs = () => {
         const names = [nameOne, nameTwo, nameThree];
         const ages = [ageOne, ageTwo, ageThree];
         
-        // Combine names and ages and sort by age in descending order
         const sortedData = names.map((name, index) => ({ name, age: ages[index] }))
                                 .sort((a, b) => b.age - a.age);
 
-        // Create an array of strings containing names and ages
         const sortedNamesAndAges = sortedData.map(entry => `${entry.name} is ${entry.age} years old`);
 
-        // Display the sorted names and ages
         messageP.textContent = `Oldest to Youngest: ${sortedNamesAndAges.join(', ')}`;
     }
 };
-
 
 const addExerciseOne = () => {
     document.getElementById("exercise1").style.display = 'block';
@@ -45,9 +41,6 @@ const addExerciseTwo = () => {
     document.getElementById("exercise1").style.display = 'none';
     document.getElementById("exercise2").style.display = 'block';
 };
-
-
-
 
 const updateMeter = () => {
 
