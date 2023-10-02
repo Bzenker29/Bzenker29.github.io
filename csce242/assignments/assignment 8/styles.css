@@ -1,0 +1,65 @@
+
+/* Meter */ 
+#meter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meter {
+    background-color: cornsilk;
+    background: linear-gradient(to top, cornsilk 0%, cornsilk 100%);
+    width: 50px; 
+    height: 200px; 
+    border-radius: 5px; 
+    position: relative;
+}
+   
+#counter {
+    width: 100%;
+    height: 0; 
+    background-color: dodgerblue;
+    position: absolute;
+    bottom: 0; 
+}
+
+
+
+/* Structure */
+#main-header {
+    width: 80%;
+    padding: 20px 8px;
+    margin: auto;
+    background-color: rosybrown;
+    text-align: center;
+}
+
+.assignment {
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+    background-color: darkseagreen;
+    border: 4px solid black;
+}
+
+/* Typography */
+
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/* Larger Resolutions */
+@media (min-width: 900px) {
+#main-content {
+    display: flex;
+}
+
+.assignment {
+flex: 1;
+}
+
+
+
+
+
+}
