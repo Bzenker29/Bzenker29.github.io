@@ -21,9 +21,24 @@
     background-color: dodgerblue;
     position: absolute;
     bottom: 0; 
+    transition: height 1s, background-color 1s;
 }
 
+/* Running Man */
 
+#running {
+    position: absolute;
+    top: 50%;
+    left: var(--left-margin, 0); /* Initial position using CSS variable */
+    transition: left 0.5s ease, content 0.5s ease;
+}
+
+#run-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
 
 /* Structure */
 #main-header {
@@ -40,6 +55,10 @@
     padding: 8px;
     background-color: darkseagreen;
     border: 4px solid black;
+}
+img {
+    margin: auto;
+    padding: 10px;
 }
 
 /* Typography */
