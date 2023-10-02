@@ -29,7 +29,7 @@
 #running {
     position: absolute;
     top: 50%;
-    left: var(--left-margin, 0); /* Initial position using CSS variable */
+    left: var(--left-margin, 0);
     transition: left 0.5s ease, content 0.5s ease;
 }
 
@@ -76,9 +76,5 @@ body {
 .assignment {
 flex: 1;
 }
-
-
-
-
 
 }
