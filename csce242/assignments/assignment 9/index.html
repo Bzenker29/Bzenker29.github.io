@@ -5,30 +5,39 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
-<body>
-    <section>
-        <h1 id="main-header">Assignment 9 - Arrays</h1>
-    </section>
 
-    <section id="main-content">
 
-        <section id="quote-holder" class="assignment">
-            <div id="quote-header">
-                <h2>Here are some quotes for you to enjoy</h2>
-            </div>
-            <div id="quote-container">
-                <p id="quote-text">ghghghgh</p>
-            </div>
+
+<body> 
+    <div id="main-header">
+        <h1> Assignment 9 - Arrays </h1>
+    </div>
+
+    <div id="main-content" class="flex">
+
+        <section id="quote-container" class="container">
+            <h1>Here are some classic James Bond quotes</h1>
+            <section id="quote-show">
+                <p>The name's Bond... James Bond.</p>
+                <p class="hidden">Bond. James Bond.</p>
+                <p class="hidden">Shaken, not stirred.</p>
+                <p class="hidden">A martini. Shaken, not stirred.</p>
+                <p class="hidden">No, Mr. Bond, I expect you to die!</p>
+            </section>
+
         </section>
 
-        <section id="rainbow-holder" class="assignment">
-            <div id="rainbow-header">
-                <h2>Here is a lovely rainbow</h2> 
-            </div>
-            <div id="rainbow-area">
-                <button id="draw">Draw Rainbow</button>
-            </div>
+        <section id="rainbow-container" class="container" >
+            <h1>Do you want to see a rainbow?</h1>
+            <section>
+                <button id="rainbow-button">Draw Rainbow</button>
+                <div id="rainbow-showing"></div>
+                <img src="images/gold.jpg" alt="Pot of Gold" id="gold-img" class="hidden">
+            </section> 
         </section>
-    </section>
+
+    </div>
+
 </body>
+
 </html>
