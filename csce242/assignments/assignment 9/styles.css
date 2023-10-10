@@ -5,11 +5,11 @@
 }
 
 #main-header {
-    background-color: lightskyblue;
     margin: auto;
     width: 90%;
-    border: solid 3px black;
     text-align: center;
+    background-color: lightskyblue;
+    border: solid 3px black;
 }
 
 
@@ -19,14 +19,19 @@ body {
 }
 
 .container {
+    text-align: center;
     margin: auto 15px;
     padding: 80px 20px;
     background-color: lightskyblue;
     border: solid 3px black;
-    text-align: center;
-    height: 250px;
+    height: 300px;
     position: relative;
-    top: 0px;
+}
+
+.rainbow-colors {
+    margin: 0px;
+    width: 400px;
+    height: 20px;
 }
 
 #rainbow-button {
@@ -37,18 +42,12 @@ body {
     border: solid 3px black;
 }
 
-.rainbow-colors {
-    width: 500px;
-    height: 30px;
-    margin: 0px;
-}
-
 #gold-img {
     position: relative;
-    top: -160px;
-    left: 200px;
+    top: -100px;
+    left: 96px;
     height: 150px;
-    width: 150px;
+    
 }
 
 /* Typography */
