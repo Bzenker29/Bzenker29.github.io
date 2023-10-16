@@ -2,26 +2,33 @@
 <html lang="en">
 
     <head> 
-        <title>Part 1: HTML and CSS</title>
+        <title>Part 2: HTML and CSS</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <header>
-        <h1 id="main-header"> The UEFA Champions League </h1>
-        <div id="main-nav">
-            <ul id="tabs">
-                <li><a href="#">About UEFA</a></li>
-                <li><a href="statpage/index.html">Player Stats</a></li>
-                <li><a href="teampage/index.html">5-man Team</a></li>
-                <li><a href="aboutpage/index.html">About UEFA</a></li>
-                <li><a href="historypage/index.html">Competition History</a></li>
-            </ul>
-        </div>
-    </header>
+   
     <body>
+        <header>
+            <h1 id="main-header"> The UEFA Champions League </h1>
+            <div id="main-nav">
+                <div id="nav-toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul id="main-nav-items" class="hidden">
+                    <li><a href="#">About UEFA</a></li>
+                    <li><a href="statpage/index.html">Player Stats</a></li>
+                    <li><a href="teampage/index.html">5-man Team</a></li>
+                    <li><a href="aboutpage/index.html">About UEFA</a></li>
+                    <li><a href="historypage/index.html">Competition History</a></li>
+                </ul>
+            </div>
+        </header>
+        
         <section id="main-content"> 
             <div>
-                <img id="holder-img" width="1200" height="250" src="images/mac-1.jpg" alt="placeholder">
+                <img id="holder-img" src="images/uefa-ucl.jpeg" alt="placeholder">
             </div>
             <div>
                 <h2 id="content-header"> Upcoming Schedule </h2>
