@@ -1,64 +1,56 @@
-class Lego {
-    constructor (title, price, age, rating, picture) {
-        this.title = title;
-        this.price = price;
-        this.age = age;
-        this.rating = rating;
-        this.picture = picture;
-    }
-
-    get item(){
-        const legoSection = document.createElement("section");
-        legoSection.classList.add("legos");
-
-
-        const heading = document.createElement("h4");
-        heading.innerText = this.title;
-        legoSection.appendChild(heading);
-
-        const infoList = document.createElement("ul");
-        legoSection.appendChild(infoList);
-        infoList.append(this.listItem(this.price));
-        infoList.append(this.listItem(this.age));
-        infoList.append(this.listItem(this.rating));
-        infoList.append(this.listItem(this.age));
-
-        legoSection.appendChild(this.legoPicture(this.picture));
-
-        return legoSection;
-    }
-
-    listItem(info) {
-        const liItem = document.createElement("li");
-        liItem.innerText = info;
-        return liItem;
-    }
-
-    legoPicture(picture) {
-        const picItem = document.createElement("img");
-        picItem.src = "images/" + picture;
-        return picItem;
-    }
-}
-
-window.onload = () => {
-    let legos = [];
-    let mainContent = document.getElementById("main-content");
-    
-
-    legos.push(new Lego("Millennium Falcon", "$849.99", "16+", "5 Stars", "falcon.jpeg")); 
-    legos.push(new Lego("R2-D2", "$239.99", "18+", "5 Stars", "r2.jpeg")); 
-    legos.push(new Lego("AT-AT", "$169.99", "10+", "5 Stars", "at.jpeg")); 
-    legos.push(new Lego("Captain Rex Hemlet", "$69.99", "18+", "5 Stars", "rex.jpeg")); 
-    legos.push(new Lego("Republic Fighter Tank", "$39.99", "7+", "4 Stars", "tank.jpeg")); 
-    legos.push(new Lego("Tie Fighter", "$49.99", "8+", "4 Stars", "tie-fighter.jpeg")); 
-
-
-
-    for (let i in legos) {
-        mainContent.append(legos[i].item);
-    }
-
-
-
-}
+const legos = [
+    { title: "Millennium Falcon", price: "849.99", age: "16+", rating: "5 Stars", picture: "falcon.jpeg" },
+    { title: "R2-D2", price: "239.99", age: "18+", rating: "5 Stars", picture: "r2.jpeg" },
+    { title: "AT-AT", price: "169.99", age: "10+", rating: "5 Stars", picture: "at.jpeg" },
+    { title: "Captain Rex Helmet", price: "69.99", age: "18+", rating: "5 Stars", picture: "rex.jpeg" },
+    { title: "Republic Fighter Tank", price: "39.99", age: "7+", rating: "4 Stars", picture: "tank.jpeg" },
+    { title: "Tie Fighter", price: "49.99", age: "8+", rating: "4 Stars", picture: "tie-fighter.jpeg" }
+  ];
+  
+  const container = document.querySelector('.container');
+  
+  legos.forEach((toy) => {
+    const toyItem = document.createElement('div');
+    toyItem.classList.add('images');
+  
+    const imgContainer = document.createElement('div');
+    imgContainer.classList.add('img-container');
+  
+    const toyImage = document.createElement('img');
+    toyImage.src = `images/${toy.picture}`;
+    toyImage.alt = toy.title;
+    toyImage.classList.add('img');
+  
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+  
+    const overlayTitle = document.createElement('h2');
+    overlayTitle.textContent = toy.title;
+  
+    const overlayDescription = document.createElement('p');
+    overlayDescription.textContent = `Age: ${toy.age} - Rating: ${toy.rating}`;
+  
+    const overlayPrice = document.createElement('p');
+    overlayPrice.textContent = `$${toy.price}`;
+  
+    overlay.appendChild(overlayTitle);
+    overlay.appendChild(overlayDescription);
+    overlay.appendChild(overlayPrice);
+  
+    imgContainer.appendChild(toyImage);
+    imgContainer.appendChild(overlay);
+  
+    toyItem.appendChild(imgContainer);
+    container.appendChild(toyItem);
+  
+    toyItem.addEventListener('mouseenter', () => {
+      overlay.style.display = 'block';
+      toyImage.style.opacity = 0.7;
+    });
+  
+    toyItem.addEventListener('mouseleave', () => {
+      overlay.style.display = 'none';
+      toyImage.style.opacity = 1;
+    });
+  });
+  
