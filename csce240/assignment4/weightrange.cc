@@ -1,73 +1,71 @@
+//Coded by Bradley Zenker
+
+#include "weightrange.h"
 #include <iostream>
 
-class WeightRange {
-private:
-    double smallestWeight;
-    double largestWeight;
+WeightRange::WeightRange() : smallest(0, "pounds"), largest(0, "pounds") {}
 
-public:
-    WeightRange() : smallestWeight(0.0), largestWeight(0.0) {}
+WeightRange::WeightRange(const Weight& small, const Weight& large) {
+    // Convert the 'small' and 'large' weights to a common unit (pounds).
+  Weight convertedSmall = small;
+  Weight convertedLarge = large;
+  convertedSmall.ConvertUnits("pounds");
+  convertedLarge.ConvertUnits("pounds");
 
-    WeightRange(double smallest, double largest) {
-        if (smallest <= largest) {
-            smallestWeight = smallest;
-            largestWeight = largest;
-        } else {
-            std::cerr << "Error: Smallest weight cannot be greater than the largest weight." << std::endl;
-            smallestWeight = 0.0; // Set default values
-            largestWeight = 0.0;
-        }
-    }
+    // Display the converted weights for debugging or informational purposes.
+  std::cout << "Converted Small: " << convertedSmall << std::endl;
+  std::cout << "Converted Large: " << convertedLarge << std::endl;
 
-    double getSmallestWeight() const {
-        return smallestWeight;
-    }
+    // Determine which weight is smaller and assign it to the 'smallest' member variable.
+    // Assign the larger weight to the 'largest' member variable.
+  if (convertedSmall.GetValue() <= convertedLarge.GetValue()) {
+    smallest = convertedSmall;
+    largest = convertedLarge;
+  } else {
+    smallest = convertedLarge;
+    largest = convertedSmall;
+  }
 
-    double getLargestWeight() const {
-        return largestWeight;
-    }
+    // Display the assigned 'smallest' and 'largest' weights for debugging or informational purposes.
+  std::cout << "Assigned Smallest: " << smallest << std::endl;
+  std::cout << "Assigned Largest: " << largest << std::endl;
+}
 
-    void setSmallestWeight(double smallest) {
-        if (smallest <= largestWeight) {
-            smallestWeight = smallest;
-        } else {
-            std::cerr << "Error: Smallest weight cannot be greater than the largest weight." << std::endl;
-        }
-    }
 
-    void setLargestWeight(double largest) {
-        if (largest >= smallestWeight) {
-            largestWeight = largest;
-        } else {
-            std::cerr << "Error: Largest weight cannot be smaller than the smallest weight." << std::endl;
-        }
-    }
+Weight WeightRange::GetSmallest() const { return smallest; }
 
-    bool InRange(double weight, bool inclusive = true) {
-        if (inclusive) {
-            return (weight >= smallestWeight && weight <= largestWeight);
-        } else {
-            return (weight > smallestWeight && weight < largestWeight);
-        }
-    }
+Weight WeightRange::GetLargest() const { return largest; }
 
-    double Width() const {
-        return largestWeight - smallestWeight;
-    }
-};
+void WeightRange::SetSmallest(const Weight& small) {
+  if (small.GetValue() <= largest.GetValue()) {
+    smallest = small;
+  } else {
+    std::cerr << "Invalid smallest weight. It must be less than or equal to the largest weight.\n";
+  }
+}
 
-int main() {
-    // Create a WeightRange object using the two-parameter constructor
-    WeightRange wr(10.0, 20.0);
+void WeightRange::SetLargest(const Weight& large) {
+  if (large.GetValue() >= smallest.GetValue()) {
+    largest = large;
+  } else {
+    std::cerr << "Invalid largest weight. It must be greater than or equal to the smallest weight.\n";
+  }
+}
 
-    // Check if a weight is in the range (inclusive)
-    std::cout << "InRange(15.0): " << wr.InRange(15.0) << std::endl; // Should return true
+bool WeightRange::InRange(const Weight& weight, bool inclusive) const {
+  double weightValue = weight.GetValue();
+  double smallestValue = smallest.GetValue();
+  double largestValue = largest.GetValue();
 
-    // Check if a weight is in the range (exclusive)
-    std::cout << "InRange(10.0, false): " << wr.InRange(10.0, false) << std::endl; // Should return false
+  if (inclusive) {
+    return weightValue >= smallestValue && weightValue <= largestValue;
+  } else {
+    return weightValue > smallestValue && weightValue < largestValue;
+  }
+}
 
-    // Calculate and display the width of the range
-    std::cout << "Width of the Range: " << wr.Width() << std::endl;
-
-    return 0;
+Weight WeightRange::Width() const {
+  double widthValue = largest.GetValue() - smallest.GetValue();
+  Weight width(widthValue, largest.GetUnits());
+  return width;
 }
